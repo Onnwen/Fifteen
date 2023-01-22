@@ -13,9 +13,13 @@
 		9E208E7B2979B3F8001CF701 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E208E7A2979B3F8001CF701 /* Preview Assets.xcassets */; };
 		9E208E86297A7DDF001CF701 /* SearchPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208E85297A7DDF001CF701 /* SearchPlantView.swift */; };
 		9E208E8A297A7F06001CF701 /* GardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208E89297A7F06001CF701 /* GardenView.swift */; };
-		9E208EBB297AC94D001CF701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208EBA297AC94D001CF701 /* ViewController.swift */; };
 		9E8F5C73297D4EBF00A760CF /* SearchPlantResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C72297D4EBF00A760CF /* SearchPlantResultView.swift */; };
 		9E8F5C77297D52B100A760CF /* PlantAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */; };
+		9E8F5C7F297D645E00A760CF /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C7E297D645E00A760CF /* Plant.swift */; };
+		9E8F5C81297D667C00A760CF /* apiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C80297D667C00A760CF /* apiKey.swift */; };
+		9E8F5C83297D76DF00A760CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C82297D76DF00A760CF /* Camera.swift */; };
+		9E8F5C85297D774400A760CF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C84297D774400A760CF /* DataModel.swift */; };
+		9E8F5C87297D776700A760CF /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C86297D776700A760CF /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +30,14 @@
 		9E208E7A2979B3F8001CF701 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E208E85297A7DDF001CF701 /* SearchPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantView.swift; sourceTree = "<group>"; };
 		9E208E89297A7F06001CF701 /* GardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenView.swift; sourceTree = "<group>"; };
-		9E208EBA297AC94D001CF701 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E208EBC297ACB2C001CF701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9E8F5C72297D4EBF00A760CF /* SearchPlantResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantResultView.swift; sourceTree = "<group>"; };
 		9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAnalizer.swift; sourceTree = "<group>"; };
+		9E8F5C7E297D645E00A760CF /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		9E8F5C80297D667C00A760CF /* apiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiKey.swift; sourceTree = "<group>"; };
+		9E8F5C82297D76DF00A760CF /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		9E8F5C84297D774400A760CF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		9E8F5C86297D776700A760CF /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				9E208EB8297AC92B001CF701 /* Image Recognition */,
+				9E8F5C80297D667C00A760CF /* apiKey.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 			children = (
 				9E208EB9297AC935001CF701 /* Camera Managment */,
 				9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */,
+				9E8F5C7E297D645E00A760CF /* Plant.swift */,
 			);
 			path = "Image Recognition";
 			sourceTree = "<group>";
@@ -151,7 +161,9 @@
 		9E208EB9297AC935001CF701 /* Camera Managment */ = {
 			isa = PBXGroup;
 			children = (
-				9E208EBA297AC94D001CF701 /* ViewController.swift */,
+				9E8F5C86297D776700A760CF /* CameraView.swift */,
+				9E8F5C84297D774400A760CF /* DataModel.swift */,
+				9E8F5C82297D76DF00A760CF /* Camera.swift */,
 			);
 			path = "Camera Managment";
 			sourceTree = "<group>";
@@ -226,11 +238,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E208EBB297AC94D001CF701 /* ViewController.swift in Sources */,
+				9E8F5C87297D776700A760CF /* CameraView.swift in Sources */,
+				9E8F5C7F297D645E00A760CF /* Plant.swift in Sources */,
+				9E8F5C85297D774400A760CF /* DataModel.swift in Sources */,
 				9E208E762979B3F5001CF701 /* ContentView.swift in Sources */,
 				9E208E8A297A7F06001CF701 /* GardenView.swift in Sources */,
 				9E208E742979B3F5001CF701 /* Fiftneen_iOSApp.swift in Sources */,
 				9E208E86297A7DDF001CF701 /* SearchPlantView.swift in Sources */,
+				9E8F5C83297D76DF00A760CF /* Camera.swift in Sources */,
+				9E8F5C81297D667C00A760CF /* apiKey.swift in Sources */,
 				9E8F5C73297D4EBF00A760CF /* SearchPlantResultView.swift in Sources */,
 				9E8F5C77297D52B100A760CF /* PlantAnalizer.swift in Sources */,
 			);
