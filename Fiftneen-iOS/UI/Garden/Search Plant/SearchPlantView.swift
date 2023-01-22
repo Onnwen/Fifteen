@@ -8,26 +8,46 @@
 import SwiftUI
 
 struct SearchPlantView: View {
+    @StateObject var model = DataModel()
+    @State var searchedPlant: Plant?
     @State var search = false
     
     var body: some View {
-            VStack(spacing: 20) {
-                Button {
-                    search = true;
-                } label: {
-                  CameraView()
-                        .cornerRadius(10)
+        VStack(spacing: 20) {
+            Button(action: {
+                search = true;
+                PlantAnalyzer.search(image: (model.viewfinderImage?.asUIImage())!) { (plantInfo, error) in
+                    if (plantInfo != nil) {
+                        searchedPlant = plantInfo
+                    }
+                    else {
+                        print(error!)
+                    }
                 }
-                .sheet(isPresented: $search) {
-                    SearchPlantResultView()
+            }) {
+                CameraView(image: $model.viewfinderImage)
+                    .background(
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    )
+                    .cornerRadius(20)
+                    .padding(10)
+                    .task {
+                        await model.camera.start()
+                    }
+            }
+            .sheet(isPresented: $search) {
+                if (searchedPlant != nil) {
+                    SearchPlantResultView(plant: searchedPlant!)
+                }
+                else {
+                    ProgressView()
+                        .progressViewStyle(.circular)
                 }
             }
-            .padding(15)
-            .navigationTitle("Cerca pianta")
-    }
-    
-    func analysePlant() {
-        print("Ciao")
+        }
+        .padding(15)
+        .navigationTitle("Cerca pianta")
     }
 }
 
