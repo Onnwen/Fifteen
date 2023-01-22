@@ -11,6 +11,11 @@
 		9E208E762979B3F5001CF701 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208E752979B3F5001CF701 /* ContentView.swift */; };
 		9E208E782979B3F8001CF701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E208E772979B3F8001CF701 /* Assets.xcassets */; };
 		9E208E7B2979B3F8001CF701 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E208E7A2979B3F8001CF701 /* Preview Assets.xcassets */; };
+		9E208E86297A7DDF001CF701 /* SearchPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208E85297A7DDF001CF701 /* SearchPlantView.swift */; };
+		9E208E8A297A7F06001CF701 /* GardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208E89297A7F06001CF701 /* GardenView.swift */; };
+		9E208EBB297AC94D001CF701 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E208EBA297AC94D001CF701 /* ViewController.swift */; };
+		9E8F5C73297D4EBF00A760CF /* SearchPlantResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C72297D4EBF00A760CF /* SearchPlantResultView.swift */; };
+		9E8F5C77297D52B100A760CF /* PlantAnalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		9E208E752979B3F5001CF701 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E208E772979B3F8001CF701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E208E7A2979B3F8001CF701 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E208E85297A7DDF001CF701 /* SearchPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantView.swift; sourceTree = "<group>"; };
+		9E208E89297A7F06001CF701 /* GardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenView.swift; sourceTree = "<group>"; };
+		9E208EBA297AC94D001CF701 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E208EBC297ACB2C001CF701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9E8F5C72297D4EBF00A760CF /* SearchPlantResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlantResultView.swift; sourceTree = "<group>"; };
+		9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAnalizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,9 @@
 		9E208E722979B3F5001CF701 /* Fiftneen-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9E208E732979B3F5001CF701 /* Fiftneen_iOSApp.swift */,
-				9E208E752979B3F5001CF701 /* ContentView.swift */,
+				9E208EBC297ACB2C001CF701 /* Info.plist */,
+				9E208E8D297AC698001CF701 /* Source */,
+				9E208E8C297AC67D001CF701 /* UI */,
 				9E208E772979B3F8001CF701 /* Assets.xcassets */,
 				9E208E792979B3F8001CF701 /* Preview Content */,
 			);
@@ -65,6 +77,83 @@
 				9E208E7A2979B3F8001CF701 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E208E83297A7DAD001CF701 /* Garden */ = {
+			isa = PBXGroup;
+			children = (
+				9E208E89297A7F06001CF701 /* GardenView.swift */,
+				9E208E84297A7DBF001CF701 /* Search Plant */,
+				9E208E8B297A7FFF001CF701 /* Plant */,
+			);
+			path = Garden;
+			sourceTree = "<group>";
+		};
+		9E208E84297A7DBF001CF701 /* Search Plant */ = {
+			isa = PBXGroup;
+			children = (
+				9E208E85297A7DDF001CF701 /* SearchPlantView.swift */,
+				9E8F5C72297D4EBF00A760CF /* SearchPlantResultView.swift */,
+			);
+			path = "Search Plant";
+			sourceTree = "<group>";
+		};
+		9E208E87297A7DE7001CF701 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9E208E88297A7DEF001CF701 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9E208E8B297A7FFF001CF701 /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plant;
+			sourceTree = "<group>";
+		};
+		9E208E8C297AC67D001CF701 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9E208E732979B3F5001CF701 /* Fiftneen_iOSApp.swift */,
+				9E208E752979B3F5001CF701 /* ContentView.swift */,
+				9E208E88297A7DEF001CF701 /* Settings */,
+				9E208E87297A7DE7001CF701 /* Profile */,
+				9E208E83297A7DAD001CF701 /* Garden */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9E208E8D297AC698001CF701 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9E208EB8297AC92B001CF701 /* Image Recognition */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9E208EB8297AC92B001CF701 /* Image Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				9E208EB9297AC935001CF701 /* Camera Managment */,
+				9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */,
+			);
+			path = "Image Recognition";
+			sourceTree = "<group>";
+		};
+		9E208EB9297AC935001CF701 /* Camera Managment */ = {
+			isa = PBXGroup;
+			children = (
+				9E208EBA297AC94D001CF701 /* ViewController.swift */,
+			);
+			path = "Camera Managment";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E208EBB297AC94D001CF701 /* ViewController.swift in Sources */,
 				9E208E762979B3F5001CF701 /* ContentView.swift in Sources */,
+				9E208E8A297A7F06001CF701 /* GardenView.swift in Sources */,
 				9E208E742979B3F5001CF701 /* Fiftneen_iOSApp.swift in Sources */,
+				9E208E86297A7DDF001CF701 /* SearchPlantView.swift in Sources */,
+				9E8F5C73297D4EBF00A760CF /* SearchPlantResultView.swift in Sources */,
+				9E8F5C77297D52B100A760CF /* PlantAnalizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,13 +364,15 @@
 				DEVELOPMENT_TEAM = 42SD9U3Y2X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fiftneen-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fifteen;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fifteen usa la camera per riconoscere le tue piante.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,13 +397,15 @@
 				DEVELOPMENT_TEAM = 42SD9U3Y2X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fiftneen-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fifteen;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fifteen usa la camera per riconoscere le tue piante.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
