@@ -20,6 +20,8 @@
 		9E8F5C83297D76DF00A760CF /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C82297D76DF00A760CF /* Camera.swift */; };
 		9E8F5C85297D774400A760CF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C84297D774400A760CF /* DataModel.swift */; };
 		9E8F5C87297D776700A760CF /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8F5C86297D776700A760CF /* CameraView.swift */; };
+		9EA0D5ED2984606B00450D22 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0D5EC2984606B00450D22 /* Result.swift */; };
+		9EA0D5EF298460E000450D22 /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA0D5EE298460E000450D22 /* PlantDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		9E8F5C82297D76DF00A760CF /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		9E8F5C84297D774400A760CF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9E8F5C86297D776700A760CF /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9EA0D5EC2984606B00450D22 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9EA0D5EE298460E000450D22 /* PlantDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 				9E208EB9297AC935001CF701 /* Camera Managment */,
 				9E8F5C76297D52B100A760CF /* PlantAnalizer.swift */,
 				9E8F5C7E297D645E00A760CF /* Plant.swift */,
+				9EA0D5EC2984606B00450D22 /* Result.swift */,
+				9EA0D5EE298460E000450D22 /* PlantDetails.swift */,
 			);
 			path = "Image Recognition";
 			sourceTree = "<group>";
@@ -240,10 +246,12 @@
 			files = (
 				9E8F5C87297D776700A760CF /* CameraView.swift in Sources */,
 				9E8F5C7F297D645E00A760CF /* Plant.swift in Sources */,
+				9EA0D5EF298460E000450D22 /* PlantDetails.swift in Sources */,
 				9E8F5C85297D774400A760CF /* DataModel.swift in Sources */,
 				9E208E762979B3F5001CF701 /* ContentView.swift in Sources */,
 				9E208E8A297A7F06001CF701 /* GardenView.swift in Sources */,
 				9E208E742979B3F5001CF701 /* Fiftneen_iOSApp.swift in Sources */,
+				9EA0D5ED2984606B00450D22 /* Result.swift in Sources */,
 				9E208E86297A7DDF001CF701 /* SearchPlantView.swift in Sources */,
 				9E8F5C83297D76DF00A760CF /* Camera.swift in Sources */,
 				9E8F5C81297D667C00A760CF /* apiKey.swift in Sources */,

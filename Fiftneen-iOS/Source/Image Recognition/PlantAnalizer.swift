@@ -10,15 +10,19 @@ import UIKit
 import SwiftUI
 
 class PlantAnalyzer {
-    static func search(image: UIImage, completion: @escaping (Plant?, Error?) -> Void) {
+    static func search(image: UIImage, completion: @escaping (Result?, Error?) -> Void) {
         let url = URL(string: "https://api.plant.id/v2/identify")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         
         let imageData = image.jpegData(compressionQuality: 0.5)
-        let parameters = ["images": [imageData!.base64EncodedString()]]
+        let parameters: [String: Any] = [
+            "api_key": "\(apiKey)",
+            "images": [imageData!.base64EncodedString()],
+            "plant_language": "it",
+            "plant_details": ["common_names"]
+        ]
         let jsonData = try! JSONSerialization.data(withJSONObject: parameters)
         request.httpBody = jsonData
         
@@ -32,7 +36,16 @@ class PlantAnalyzer {
                 return
             }
             do {
-                let plantInfo = try JSONDecoder().decode(Plant.self, from: data)
+                let jsonString = String(data: data, encoding: .utf8)!
+                let json = deserializeData(from: jsonString)
+                print("In postData got response JSON object:\n\(json)")
+                
+                if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                    print(JSONString)
+                }
+                
+                let plantInfo = try JSONDecoder().decode(Result.self, from: data)
+                print(plantInfo)
                 completion(plantInfo, nil)
             } catch let error {
                 completion(nil, error)
@@ -40,6 +53,19 @@ class PlantAnalyzer {
         }
         task.resume()
     }
+}
+
+func deserializeData(from jsonString: String) -> [String: AnyObject] {
+    NSLog("In deserializeData got jsonString: \(jsonString)")
+    guard let jsonData = jsonString.data(using: .utf8) else {
+        NSLog("In deserializeData fail to get jsonData")
+        return [String: AnyObject]()
+    }
+    guard let json = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [String: AnyObject] else {
+        NSLog("In deserializeData fail to decode JSON string")
+        return [String: AnyObject]()
+    }
+    return json
 }
 
 extension View {
@@ -67,3 +93,4 @@ extension UIView {
         }
     }
 }
+
